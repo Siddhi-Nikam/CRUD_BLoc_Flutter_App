@@ -10,7 +10,10 @@ class EditUserScreen extends StatefulWidget {
   final String userEmail;
 
   EditUserScreen(
-      {required this.userId, required this.userName, required this.userEmail});
+      {super.key,
+      required this.userId,
+      required this.userName,
+      required this.userEmail});
 
   @override
   _EditUserScreenState createState() => _EditUserScreenState();

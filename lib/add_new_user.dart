@@ -8,6 +8,8 @@ class AddNewUser extends StatelessWidget {
   final TextEditingController nameController = TextEditingController();
   final TextEditingController emailController = TextEditingController();
 
+  AddNewUser({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
