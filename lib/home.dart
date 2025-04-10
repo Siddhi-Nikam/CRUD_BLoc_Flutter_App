@@ -90,7 +90,7 @@ class UserScreen extends StatelessWidget {
                                 subtitle: Text(user['email'] ?? "No Email",
                                     style: TextStyle(fontSize: 14)),
                                 trailing: SizedBox(
-                                  width: 100, //Prevents overflow
+                                  width: 100, 
                                   child: Row(
                                     mainAxisAlignment: MainAxisAlignment.end,
                                     children: [
@@ -119,8 +119,11 @@ class UserScreen extends StatelessWidget {
                                             context.read<UserBloc>().add(
                                                 DeleteUser(userId.toString()));
                                           } else {
-                                            print(
-                                                "Error: Cannot delete, User ID is null");
+                                            ScaffoldMessenger.of(context)
+                                                .showSnackBar(SnackBar(
+                                              content: Text(
+                                                  "User ID is null, cannot delete"),
+                                            ));
                                           }
                                         },
                                       ),

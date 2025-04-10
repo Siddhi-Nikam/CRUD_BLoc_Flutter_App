@@ -9,13 +9,14 @@ class EditUserScreen extends StatefulWidget {
   final String userName;
   final String userEmail;
 
-  EditUserScreen(
+  const EditUserScreen(
       {super.key,
       required this.userId,
       required this.userName,
       required this.userEmail});
 
   @override
+  // ignore: library_private_types_in_public_api
   _EditUserScreenState createState() => _EditUserScreenState();
 }
 
